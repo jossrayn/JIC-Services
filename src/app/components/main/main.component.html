@@ -1,0 +1,189 @@
+<div class="content" role="main">
+    <div class="card-container">
+            <mat-form-field>
+                <mat-label >Destiny</mat-label>
+                <input matInput placeholder="Destiny">
+                <mat-hint>Example: San José</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker1" placeholder="Check in" [formControl]="dateIn">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+    
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker2" placeholder="Check Out" [formControl]="dateOut">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <button mat-icon-button aria-label="Search" style="margin-bottom: 20px;">
+                    <mat-icon>search</mat-icon>
+            </button>
+            
+            <mat-accordion style="width: 100%;max-height: 40%;">
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Advanced
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Filters
+                        </mat-panel-description>
+                        </mat-expansion-panel-header> 
+                        <h3>Kids</h3>        
+                        <mat-slider
+                        thumbLabel
+                        [displayWith]="formatLabel"
+                        tickInterval="1"
+                        min="0"
+                        max="10">
+                        </mat-slider>
+                        <h3>Adults</h3>        
+                        <mat-slider
+                        thumbLabel
+                        [displayWith]="formatLabel"
+                        tickInterval="1"
+                        min="0"
+                        max="10">
+                        </mat-slider>
+                        <h3>Room type</h3>
+                        <mat-form-field>
+                            <mat-label>Room type</mat-label>
+                            <mat-select value="Small">
+                                <mat-option value="small">Small</mat-option>
+                                <mat-option value="medium">Medium</mat-option>
+                                <mat-option value="large">Large</mat-option>
+                            </mat-select>
+                        </mat-form-field> 
+                        <h3>Price</h3>
+                        <mat-form-field>
+                            <mat-label >Min</mat-label>
+                            <input matInput placeholder="Min price">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <mat-label >Max</mat-label>
+                            <input matInput placeholder="Max price">
+                        </mat-form-field> 
+                </mat-expansion-panel>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                  (closed)="panelOpenState = false">
+            </mat-expansion-panel>
+            </mat-accordion>
+    </div>
+</div>
+
+<div class="cardList" style="max-height: 70%;overflow-y: scroll;">
+    <mat-card class="cardListItem">
+        <mat-card-header>
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-actions>
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            View more
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Hotel details
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>         
+                        <mat-form-field>
+                            <input matInput placeholder="First name">
+                        </mat-form-field>
+                </mat-expansion-panel>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                </mat-expansion-panel>
+            </mat-accordion>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="content-card">
+            <mat-card-header>
+                <mat-card-title>Shiba Inu</mat-card-title>
+                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+            <mat-card-actions>
+                <mat-accordion>
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                View more
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                Hotel details
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>         
+                            <mat-form-field>
+                                <input matInput placeholder="First name">
+                            </mat-form-field>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true"
+                                         (closed)="panelOpenState = false">
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-actions>
+        </mat-card>
+
+        <mat-card class="content-card">
+                <mat-card-header>
+                    <mat-card-title>Shiba Inu</mat-card-title>
+                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+                <mat-card-actions>
+                    <mat-accordion>
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    View more
+                                </mat-panel-title>
+                                <mat-panel-description>
+                                    Hotel details
+                                </mat-panel-description>
+                            </mat-expansion-panel-header>         
+                                <mat-form-field>
+                                    <input matInput placeholder="First name">
+                                </mat-form-field>
+                        </mat-expansion-panel>
+                        <mat-expansion-panel (opened)="panelOpenState = true"
+                                             (closed)="panelOpenState = false">
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </mat-card-actions>
+            </mat-card>
+
+            <mat-card class="content-card">
+                    <mat-card-header>
+                        <mat-card-title>Shiba Inu</mat-card-title>
+                        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+                    <mat-card-actions>
+                        <mat-accordion>
+                            <mat-expansion-panel>
+                                <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                        View more
+                                    </mat-panel-title>
+                                    <mat-panel-description>
+                                        Hotel details
+                                    </mat-panel-description>
+                                </mat-expansion-panel-header>         
+                                    <mat-form-field>
+                                        <input matInput placeholder="First name">
+                                    </mat-form-field>
+                            </mat-expansion-panel>
+                            <mat-expansion-panel (opened)="panelOpenState = true"
+                                                 (closed)="panelOpenState = false">
+                            </mat-expansion-panel>
+                        </mat-accordion>
+                    </mat-card-actions>
+                </mat-card>
+</div>

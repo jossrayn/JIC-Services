@@ -1,0 +1,65 @@
+.content {
+    display: flex;
+    flex-flow: row wrap;
+	margin: 6px auto;
+    max-width: 80%;
+    padding: 10px 20px;
+    flex-direction: column;
+    align-items: left;
+    background-color:#B2DFDB;
+}
+
+.card-container {
+	flex-wrap: wrap;
+	justify-content: left;
+}
+
+.cardList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    max-width: 80%;
+    background-color:#B2DFDB;
+    margin: 6px auto;
+  }
+  /* Column Gap */
+  .cardList > * {
+    box-sizing: border-box;
+    margin: 20px auto;
+  }
+  /* Item sizing */
+  .cardListItem {
+    flex: 0 1 calc(26.6% - 20px);
+  }
+
+button {
+    border: solid gray 2px;
+
+	&:hover {
+		background-color: "grey";
+	}
+}
+
+.content-card {
+	max-width: 400px;
+}
+
+.mat-accordion {
+	margin-top: 10px;
+}
+
+.mat-form-field {
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+
+.slider-margin {
+	margin: 10px;
+}
+.mat-slider-horizontal {
+	width: 300px;
+}
+.mat-slider-vertical {
+	height: 300px;
+}
